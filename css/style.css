@@ -37,5 +37,14 @@ body{
 
 .weatherIcon{
     height: 300px;
-    width : 300px;
+    width : 200px;
+}
+
+.logoSize{
+    height: 42px;
+}
+
+.maxMintemp{
+    height : 92px;
+    width : 92px;
 }
