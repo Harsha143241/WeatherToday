@@ -48,3 +48,9 @@ body{
     height : 92px;
     width : 92px;
 }
+.currentWeatherPanel{
+    margin-left: 16px; 
+    margin-top: 16px;
+    height : 455px;
+    width : 300px;
+}
