@@ -1,2 +1,2 @@
 # WeatherToday
-An Angular Simple weather App
+This is my first Angular App.A Simple weather App
