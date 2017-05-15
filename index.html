@@ -55,8 +55,7 @@
                     <div class="col-md-4">
                         <div class="panel panel-default currentWeatherPanel">
                             <div class="panel-body">
-                                <h2>Dallas
-                                    <h2>
+                                <h2>{{currentWeather.name}}</h2>
                                         <img class="weatherIcon" src="img/animated/cloudy-day-1.svg">
                                         <p>{{currentWeather.main.temp}}</p>
                                         <p>{{currentWeather.weather[0].description}}</p>
@@ -88,8 +87,7 @@
 
     <section>
         <div class="container" >
-
-            <div class="panel-group" id="accordion">
+              <div class="panel-group" id="accordion">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="panel-title expand">
@@ -99,8 +97,10 @@
                     </div>
                     <div id="collapse1" class="panel-collapse collapse">
                         <div class="panel-body">
-                            <p>{{forecastData.city.name}} {{forecastData.list[0].temp.day}} {{forecastData.list[0].temp.max}}
-                                {{forecastData.list[0].temp.min}} {{forecastData.list[0].weather[0].description}}</p>
+                            <h2>{{forecastData.city.name}} </h2>
+                            <p><img class = "forcasetIcon" src="img/temp_1.svg">{{forecastData.list[0].temp.max}}
+                                <img class = "forcasetIcon" src="img/temp_2.svg">{{forecastData.list[0].temp.min}} 
+                                <img src="img/static/cloudy-day-1.svg">{{forecastData.list[0].weather[0].description}}</p>
 
                         </div>
                     </div>
@@ -114,8 +114,10 @@
                     </div>
                     <div id="collapse2" class="panel-collapse collapse">
                         <div class="panel-body">
-                            <p>{{forecastData.city.name}} {{forecastData.list[1].temp.day}} {{forecastData.list[1].temp.max}}
-                                {{forecastData.list[1].temp.min}} {{forecastData.list[1].weather[0].description}}</p>
+                            <h2>{{forecastData.city.name}} </h2>
+                            <p><img class = "forcasetIcon" src="img/temp_1.svg">{{forecastData.list[1].temp.max}}
+                                <img class = "forcasetIcon" src="img/temp_2.svg">{{forecastData.list[1].temp.min}} 
+                                <img src="img/static/cloudy-day-1.svg">{{forecastData.list[0].weather[1].description}}</p>
                         </div>
                     </div>
                 </div>
@@ -128,8 +130,10 @@
                     </div>
                     <div id="collapse3" class="panel-collapse collapse">
                         <div class="panel-body">
-                            <p>{{forecastData.city.name}} {{forecastData.list[2].temp.day}} {{forecastData.list[2].temp.max}}
-                                {{forecastData.list[2].temp.min}} {{forecastData.list[2].weather[0].description}}</p>
+                            <h2>{{forecastData.city.name}} </h2>
+                            <p><img class = "forcasetIcon" src="img/temp_1.svg">{{forecastData.list[2].temp.max}}
+                                <img class = "forcasetIcon" src="img/temp_2.svg">{{forecastData.list[2].temp.min}} 
+                                <img src="img/static/cloudy-day-1.svg">{{forecastData.list[2].weather[0].description}}</p>
                         </div>
                     </div>
                 </div>
@@ -142,8 +146,10 @@
                     </div>
                     <div id="collapse4" class="panel-collapse collapse">
                         <div class="panel-body">
-                            <p>{{forecastData.city.name}} {{forecastData.list[3].temp.day}} {{forecastData.list[3].temp.max}}
-                                {{forecastData.list[3].temp.min}} {{forecastData.list[1].weather[0].description}}</p>
+                           <h2>{{forecastData.city.name}} </h2>
+                            <p><img class = "forcasetIcon" src="img/temp_1.svg">{{forecastData.list[3].temp.max}}
+                                <img class = "forcasetIcon" src="img/temp_2.svg">{{forecastData.list[3].temp.min}} 
+                                <img src="img/static/cloudy-day-1.svg">{{forecastData.list[3].weather[0].description}}</p>
                         </div>
                     </div>
                 </div>
@@ -156,8 +162,10 @@
                     </div>
                     <div id="collapse5" class="panel-collapse collapse">
                         <div class="panel-body">
-                            <p>{{forecastData.city.name}} {{forecastData.list[4].temp.day}} {{forecastData.list[4].temp.max}}
-                                {{forecastData.list[4].temp.min}} {{forecastData.list[4].weather[0].description}}</p>
+                            <h2>{{forecastData.city.name}} </h2>
+                            <p><img class = "forcasetIcon" src="img/temp_1.svg">{{forecastData.list[4].temp.max}}
+                                <img class = "forcasetIcon" src="img/temp_2.svg">{{forecastData.list[4].temp.min}} 
+                                <img src="img/static/cloudy-day-1.svg">{{forecastData.list[4].weather[0].description}}</p>
                         </div>
                     </div>
                 </div>
@@ -170,8 +178,10 @@
                     </div>
                     <div id="collapse6" class="panel-collapse collapse">
                         <div class="panel-body">
-                            <p>{{forecastData.city.name}} {{forecastData.list[5].temp.day}} {{forecastData.list[5].temp.max}}
-                                {{forecastData.list[5].temp.min}} {{forecastData.list[5].weather[0].description}}</p>
+                            <h2>{{forecastData.city.name}} </h2>
+                            <p><img class = "forcasetIcon" src="img/temp_1.svg">{{forecastData.list[5].temp.max}}
+                                <img class = "forcasetIcon" src="img/temp_2.svg">{{forecastData.list[5].temp.min}} 
+                                <img src="img/static/cloudy-day-1.svg">{{forecastData.list[5].weather[0].description}}</p>
                         </div>
                     </div>
                 </div>
@@ -184,8 +194,10 @@
                     </div>
                     <div id="collapse7" class="panel-collapse collapse">
                         <div class="panel-body">
-                            <p>{{forecastData.city.name}} {{forecastData.list[6].temp.day}} {{forecastData.list[6].temp.max}}
-                                {{forecastData.list[6].temp.min}} {{forecastData.list[6].weather[0].description}}</p>
+                            <h2>{{forecastData.city.name}} </h2>
+                            <p><img class = "forcasetIcon" src="img/temp_1.svg">{{forecastData.list[6].temp.max}}
+                                <img class = "forcasetIcon" src="img/temp_2.svg">{{forecastData.list[6].temp.min}} 
+                                <img src="img/static/cloudy-day-1.svg">{{forecastData.list[6].weather[0].description}}</p>
                         </div>
                     </div>
                 </div>

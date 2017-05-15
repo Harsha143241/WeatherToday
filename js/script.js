@@ -14,6 +14,7 @@ app.controller('mainWeatherCtrl', ['$scope', '$http', function ($scope, $http) {
         }).then(function successCallback(response) {
            
             $scope.currentWeather = response.data;
+            console.log($scope.currentWeather)
             $scope.currentWeather.main.temp;
             $scope.currentWeather.main.temp_max;
             $scope.currentWeather.main.temp_min;
@@ -30,7 +31,6 @@ app.controller('mainWeatherCtrl', ['$scope', '$http', function ($scope, $http) {
         }).then(function successCallback(response) {
            
             $scope.forecastData = response.data;
-            console.log($scope.forecastData);
             $scope.forecastData.city.name 
             $scope.forecastData.list[0].temp.day;
             $scope.forecastData.list[0].temp.max;
