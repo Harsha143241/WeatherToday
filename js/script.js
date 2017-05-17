@@ -1,4 +1,8 @@
 var app = angular.module('weatherToday', []);
+app.filter('roundUp', function(){
+  return function(input) {
+    return Math.ceil(+input);
+  }});
 app.controller('mainWeatherCtrl', ['$scope', '$http', function ($scope, $http) {
 
     var keys = 'f80becd14221a863141d20e0a3eea553'
@@ -10,7 +14,7 @@ app.controller('mainWeatherCtrl', ['$scope', '$http', function ($scope, $http) {
 
         $http({
             method: 'GET',
-            url: 'http://api.openweathermap.org/data/2.5/weather?q=' + $scope.cityName +'&appid=f80becd14221a863141d20e0a3eea553'
+            url: 'http://api.openweathermap.org/data/2.5/weather?q=' + $scope.cityName +'&appid=f80becd14221a863141d20e0a3eea553&units=metric'
         }).then(function successCallback(response) {
            
             $scope.currentWeather = response.data;
@@ -27,10 +31,11 @@ app.controller('mainWeatherCtrl', ['$scope', '$http', function ($scope, $http) {
         $http({
             method: 'GET',
                  //http://api.openweathermap.org/data/3.0/triggers/5852816a9aaacb00153134a3      
-            url: 'http://api.openweathermap.org/data/2.5/forecast/daily?q=' + $scope.cityName +'&cnt=10&units=celsius&appid=f80becd14221a863141d20e0a3eea553'
+            url: 'http://api.openweathermap.org/data/2.5/forecast/daily?q=' + $scope.cityName +'&units=metric&cnt=10&units=celsius&appid=f80becd14221a863141d20e0a3eea553'
         }).then(function successCallback(response) {
            
             $scope.forecastData = response.data;
+            console.log($scope.forecastData)
             $scope.forecastData.city.name 
             $scope.forecastData.list[0].temp.day;
             $scope.forecastData.list[0].temp.max;
