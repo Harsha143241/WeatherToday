@@ -40,7 +40,7 @@
                         <div class="col-md-10">
                             <div id="custom-search-input">
                                 <div class="input-group col-md-12">
-                                    <input type="text" class="form-control input-lg" placeholder="Please Enter you city Name" ng-model="cityName" />
+                                    <input type="text" class="form-control input-lg" placeholder="Please Enter you city Name" ng-model="cityName">
                                     <span class="input-group-btn">
                                         <button class="btn btn-info btn-lg" type="button" ng-click = "getWeatherDetails()">
                                             <i class="glyphicon glyphicon-search"></i>
@@ -56,7 +56,7 @@
                         <div class="panel panel-default currentWeatherPanel">
                             <div class="panel-body">
                                 <h2>{{currentWeather.name}}</h2>
-                                <img class="weatherIcon" src="img/animated/cloudy-day-1.svg">
+                                <img class="weatherIcon" ng-src="img/animated/{{WeatherImg}}">
                                 <p>{{currentWeather.main.temp | roundUp}}</p>
                                 <p>{{currentWeather.weather[0].description}}</p>
 
@@ -205,7 +205,7 @@
             </div>
         </div>
         <footer class="site-footer">
-            Copyright © Footer 2014. All right reserved
+            Copyright © WeatherToday 2017. All right reserved
         </footer>
     </section>
     <script src="node_modules/jquery/dist/jquery.js"></script>

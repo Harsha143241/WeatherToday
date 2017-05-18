@@ -35,7 +35,8 @@ body{
    
    left:0px;
    bottom:0px;
-   height:30px;
+   height:50px;
    width:100%;
+   text-align: center;
    background: #5782B7;
 }

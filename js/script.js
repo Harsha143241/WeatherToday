@@ -11,7 +11,6 @@ app.controller('mainWeatherCtrl', ['$scope', '$http', function ($scope, $http) {
     //Get Current Data
     $scope.getWeatherDetails = function () {
 
-
         $http({
             method: 'GET',
             url: 'http://api.openweathermap.org/data/2.5/weather?q=' + $scope.cityName +'&appid=f80becd14221a863141d20e0a3eea553&units=metric'
@@ -24,6 +23,27 @@ app.controller('mainWeatherCtrl', ['$scope', '$http', function ($scope, $http) {
             $scope.currentWeather.main.temp_min;
             $scope.currentWeather.weather[0].description;
             $scope.currentWeather.wind.speed;
+
+        if( $scope.currentWeather.weather[0].icon === '01d' || '01n' ){
+            $scope.WeatherImg = 'cloudy-day-3.svg'
+        }else if($scope.currentWeather.weather[0].icon === '02d' || '02n' ){
+            $scope.WeatherImg = 'cloudy.svg'
+        }else if($scope.currentWeather.weather[0].icon === '03d' || '03n' ){
+            $scope.WeatherImg = 'cloudy.svg'
+        }else if(  $scope.currentWeather.weather[0].icon === '04d' || '04n' ){
+            $scope.WeatherImg = 'cloudy.svg'
+        }else if($scope.currentWeather.weather[0].icon === '09d' || '09n' ){
+            $scope.WeatherImg = 'rainy-1.svg'
+        }else if($scope.currentWeather.weather[0].icon === '10d' || '10n' ){
+            $scope.WeatherImg = 'rainy-3.svg'
+        }else if($scope.currentWeather.weather[0].icon === '11d' || '11n' ){
+            $scope.WeatherImg = 'rainy-3.svg'
+        }else if($scope.currentWeather.weather[0].icon === '13d' || '13n' ){
+            $scope.WeatherImg = 'snowt-1.svg'
+        }else if($scope.currentWeather.weather[0].icon === '50d' || '50n' ){
+            $scope.WeatherImg = 'cloudy.svg'
+        }
+
         }, function errorCallback(response) {
             console.log(response);
         });
@@ -46,6 +66,9 @@ app.controller('mainWeatherCtrl', ['$scope', '$http', function ($scope, $http) {
         });
 
         $scope.showSearchData = true;
+        
     }
+
+
 
 }])
